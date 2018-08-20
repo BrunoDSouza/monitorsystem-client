@@ -1,0 +1,83 @@
+@import "normalize.css";
+@import "flex-list.css";
+
+
+* {
+	font-family: 'Roboto', sans-serif;
+}
+
+/*
+Estilo padrão para os demais componentes
+*/
+label {
+	font-weight: bold;
+}
+.well {
+	background-color: #fff;
+	border-bottom: 3.5px solid #51b8bd;
+}
+.well:hover {
+  box-shadow: 4px 3px 20px 2px rgba(40, 42, 42, 0.36);
+	transition: all .3s cubic-bezier(.65,.05,.36,1);
+	border-color: #51b8bd;
+	border-radius: 10px;
+}
+
+.list-group-item:first-child {
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+}
+.list-group-item:last-child {
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+/* Classe utilizada nos containers */
+/* Definir bordar e padding entre os wells*/
+.gap, .gap-right, .gap-left { margin-bottom: -15px !important; }
+.gap, .gap-right { padding-right: 2px !important; }
+.gap, .gap-left { padding-left: 2px !important; }
+
+@media only screen and (max-width: 768px){
+	[class*="gap"] {
+		padding-left: 15px !important;
+		padding-right: 15px !important;
+	}
+}
+
+
+/* Estilização do menu principal*/
+.nav-color {
+	background-color: #00b7bd;
+	border-color: #00abb2;
+}
+.nav-color .navbar-brand,
+.nav-color .navbar-nav > li > a,
+.nav-color .navbar-nav > .active > a {
+	color: #fff;
+}
+
+.nav-color .navbar-brand:hover,
+.nav-color .navbar-brand:focus,
+.nav-color .navbar-nav > li > a:hover,
+.nav-color .navbar-nav > li > a:focus,
+.nav-color .navbar-nav > .active > a:hover,
+.nav-color .navbar-nav > .active > a:focus{
+	color: #f1f1f1;
+}
+
+/*Estilização dos box's onde conteram as informações do paciente*/
+.legend {
+	font-size: 15px;
+}
+
+.box-header{
+	padding-bottom: 10px;
+	padding-left: 11px;
+	font-weight: bold;
+	font-size: 18px;
+}
+.box-single,
+.box-list {
+	margin-top: -15px;
+	margin-bottom: 12px;
+}
