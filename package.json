@@ -12,8 +12,6 @@
   "dependencies": {
     "@aspnet/signalr": "^1.0.2",
     "bootstrap-sass": "^3.3.7",
-    "can-connect": "^3.0.2",
-    "can-connect-signalr": "^0.2.3",
     "lodash": "^4.17.4",
     "sweetalert": "^2.1.0",
     "tslib": "^1.9.3",

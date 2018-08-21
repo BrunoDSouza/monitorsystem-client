@@ -6,22 +6,14 @@ import computerList from './computer'
 
 export default {
   components: { computerList },
-  data () { return {} },
+  data () {
+    return {
+      connection : {}
+    }
+  },
   mounted () {
     this.setDados()
-
-    var connection = new signalR.HubConnectionBuilder()
-          .withUrl("http://localhost:44342/monitor")
-          .build()
-
-    connection.on("ReceiveMessage", function (user, message) {
-      // TODO:
-    });
-
-    connection.start().catch(function (err) {
-        return console.error(err.toString());
-    });
-
+    // TODO Connect to message service...
   },
   computed: {
     ...mapGetters({
@@ -30,6 +22,15 @@ export default {
   },
   methods: {
     ...mapActions(['setDados']),
+    onReceive () {
+      // TODO: Implement method to receive callbacks on server
+    },
+    sendMessage () {
+      // TODO: Implement method to send data to server
+    },
+    updateComputers () {
+      // TODO: Implement method to update processes for each computer
+    }
   },
   watch: { }
 }
@@ -48,24 +49,3 @@ export default {
     </div>
   </div>
 </template>
-
-<style lang='scss'>
-
-  .btn-confirm {
-    border-radius: 22px;
-    position: fixed;
-    z-index: 1;
-    transition: all .3s cubic-bezier(.65,.05,.36,1);
-    margin-left: 40%;
-    margin-right: 40%;
-  }
-
-  .btn-confirm:hover {
-    box-shadow: 4px 3px 20px 2px rgba(40, 42, 42, 0.36);
-    transition: all .3s cubic-bezier(.65,.05,.36,1);
-    background-color: #ff5d5d !important;
-    border-color: #ff5d5d !important;
-    border-radius: 20px;
-  }
-
-</style>
